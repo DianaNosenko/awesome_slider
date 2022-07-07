@@ -1,0 +1,116 @@
+*{padding: 0; margin: 0; border: 0;}
+*,*::before,*::after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+nav, footer, header, aside{display: block;}
+html, body{ height: 100%; width: 100%; font-size: 100%; line-height: 1; font-size: 14px;
+-ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+input, button, textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+/*--------------------------------------------------------------------------------------------------*/
+body {
+    height: 100vh;
+    color: white;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper>div{
+    transition: transform 0.5s ease-in-out;
+}
+h1 {
+    font-size: 26px;
+}
+/*---------------------------left & right sliders containers style-------------------------------*/
+.right_slider {
+    position: absolute;
+    margin-left: 35%;
+    width: 65%;
+    height: 100vh;
+}
+.right_slider>div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.left_slider {
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    background-color: aqua;
+}
+.left_slider>div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------buttons style------------------------------*/
+.btns {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+}
+.fa-solid{
+    font-size: 16px;
+    color: rgb(110, 107, 107); 
+}
+button {
+    padding: 5px;
+}
+button:first-child{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+button:last-child{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+button:hover i{
+    color: black;
+}
+#down {
+    transform: translateX(-100%);
+}
+#up {
+    transform: translate(-100%,-100%);
+}
+/*-------------------------right side images style---------------------------------*/
+.right_slider>div:nth-child(1) {
+    background-image: url(/img/man.jpeg);
+}
+.right_slider>div:nth-child(2) {
+    background-image: url(/img/photo.jpeg);
+}
+.right_slider>div:nth-child(3) {
+    background-image: url(/img/billiards.jpeg);
+}
+.right_slider>div:nth-child(4) {
+    background-image: url(/img/vine.jpeg);
+}
+/*----------------------------left side gradients style------------------------------*/
+.left_slider>div:nth-child(1){
+    background-image: linear-gradient(to bottom left, rgb(224,189,160), rgb(73,14,7));
+}
+.left_slider>div:nth-child(2){
+    background-image: linear-gradient(to bottom left, rgb(16,57,26), rgb(9,19,17));
+}
+.left_slider>div:nth-child(3){
+    background-image: linear-gradient(to bottom left, rgb(207,169,134), rgb(157,157,158));
+}
+.left_slider>div:nth-child(4){
+    background-image: linear-gradient(rgb(36,62,73), rgb(67,27,16));
+}
